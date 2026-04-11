@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Título que aparece en la pestaña -->
+    <title>Control de Gastos</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Título principal -->
+      <h1>Control de Gastos Mensual</h1>
+
+      <!-- ===== SECCIÓN INGRESO ===== -->
+      <h2>Ingreso</h2>
+
+      <!-- Campo para ingresar dinero -->
+      <input type="number" id="income" placeholder="Ej: 2000000" />
+
+      <!-- Botón para guardar ingreso -->
+      <button id="saveIncome">Guardar Ingreso</button>
+
+      <!-- ===== SECCIÓN GASTOS ===== -->
+      <h2>Agregar Gasto</h2>
+
+      <!-- Nombre del gasto -->
+      <input type="text" id="expenseName" placeholder="Nombre del gasto" />
+
+      <!-- Valor del gasto -->
+      <input type="number" id="expenseAmount" placeholder="Valor" />
+
+      <!-- Tipo de gasto -->
+      <select id="expenseType">
+        <!-- Opciones -->
+        <option value="obligatorio">Obligatorio</option>
+        <option value="hobby">Hobby</option>
+        <option value="hormiga">Hormiga</option>
+      </select>
+
+      <!-- Botón para agregar gasto -->
+      <button id="addExpense">Agregar Gasto</button>
+      <!-- ===== movimientos  ===== -->
+      <h2>Movimientos</h2>
+
+      <table border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="movementsTable"></tbody>
+      </table>
+
+      <!-- ===== RESUMEN ===== -->
+      <h2>Resumen</h2>
+
+      <!-- Aquí se muestra el resultado -->
+      <p id="summary"></p>
+
+      <h2>Recomendación</h2>
+      <p id="recommendation"></p>
+
+      <button id="exportBtn">Exportar a Excel</button>
+      <button id="clearBtn">Limpiar Datos</button>
+    </div>
+
+    <!-- Conexión con JavaScript (modo módulo) -->
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
