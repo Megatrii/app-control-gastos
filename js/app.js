@@ -152,3 +152,8 @@ Hormiga: ${summaryData.hormiga} (${summaryData.percentages.hormiga.toFixed(1)}%)
 
   renderTable(data);
 }
+
+// cambios permanezcan luego de actualizar
+document.addEventListener("DOMContentLoaded", () => {
+  render();
+});
